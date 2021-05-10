@@ -537,8 +537,8 @@ let
     src = fetchFromGitHub {
       owner = "neoclide";
       repo = "coc.nvim";
-      rev = "a3966628cb090ed9a102e7b9c78f9fb90abffd21";
-      sha256 = "1pa28arwyfgvf6c1vbcqnlwiz54lqlw8lqv89nz8880wpmwr3njk";
+      rev = "6cc7432fa00d8a7351cee54f7b800e992057315a";
+      sha256 = "048mvb82ni7m3ch5i32q54qnsh3rl28yw1q7fcsapklnknaaq3qh";
     };
     meta.homepage = "https://github.com/neoclide/coc.nvim/";
   };
@@ -2208,12 +2208,12 @@ let
 
   lazygit-nvim = buildVimPluginFrom2Nix {
     pname = "lazygit-nvim";
-    version = "2021-03-25";
+    version = "2021-05-10";
     src = fetchFromGitHub {
       owner = "kdheepak";
       repo = "lazygit.nvim";
-      rev = "fb5ab7d26ac414a7e7bfff6b89f69e2dd2fd3884";
-      sha256 = "1nn6zhjqfk88jmavl9y8li4y08v3wb2m2kskq9yf36hadw29im30";
+      rev = "acc383d1eab516318816f43e3e380fead8249acb";
+      sha256 = "0w777was4z7yk3z6fn55phqzxmsbzbz0v4959h52yi91pdbb4qfc";
     };
     meta.homepage = "https://github.com/kdheepak/lazygit.nvim/";
   };
@@ -3160,8 +3160,8 @@ let
     src = fetchFromGitHub {
       owner = "kevinhwang91";
       repo = "nvim-bqf";
-      rev = "ac3b0f70843840918389191f575f2404cad3304f";
-      sha256 = "0jxj9v8sxnmvvirwzj171dd43w2kg6g3dri1pya20x8plka8rgs6";
+      rev = "4586436b45e2be5ee58640b6fdfd718506435924";
+      sha256 = "14fnqr9zxmqxp378w3h8x22crdcj88k6d5g0kb46bwfn5vivd042";
     };
     meta.homepage = "https://github.com/kevinhwang91/nvim-bqf/";
   };
@@ -4021,12 +4021,12 @@ let
 
   rust-tools-nvim = buildVimPluginFrom2Nix {
     pname = "rust-tools-nvim";
-    version = "2021-05-06";
+    version = "2021-05-10";
     src = fetchFromGitHub {
       owner = "simrat39";
       repo = "rust-tools.nvim";
-      rev = "2e615d4a039d2fc580479a5e512330527d151d3f";
-      sha256 = "0hc0iv5p3ys98w8sv4569jh5x20vqqyysgff5nrgysl0amw6rgwd";
+      rev = "2de94fc88d6382e5f0b61f1c619c8919fd45aea3";
+      sha256 = "14fg0qs1y2xszpdsnp8gcynqj9fx5c47ckbpgr48hv5df8xncasf";
     };
     meta.homepage = "https://github.com/simrat39/rust-tools.nvim/";
   };
@@ -9081,12 +9081,12 @@ let
 
   wildfire-vim = buildVimPluginFrom2Nix {
     pname = "wildfire-vim";
-    version = "2021-05-09";
+    version = "2021-05-10";
     src = fetchFromGitHub {
       owner = "gcmt";
       repo = "wildfire.vim";
-      rev = "2f6b7d7861cc4c9ff95338f150159e1ccee64d82";
-      sha256 = "1ppc7pqy7wbaac0cd9ng5hil1f7argsd5dvg3896z5iqpf5xhmrl";
+      rev = "fa91b732fd1c5acd23b7b32d5fbbc884eedafc8d";
+      sha256 = "15gikqmpaf5c6687kgc5ib57pw7gyvxaihdv5549s7p2xkkbcl24";
     };
     meta.homepage = "https://github.com/gcmt/wildfire.vim/";
   };
