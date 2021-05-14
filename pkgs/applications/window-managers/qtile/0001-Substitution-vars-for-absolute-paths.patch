@@ -1,5 +1,5 @@
 diff --git a/libqtile/backend/x11/xcursors.py b/libqtile/backend/x11/xcursors.py
-index 24454b83..ef37875c 100644
+index 5748a56f..1179af32 100644
 --- a/libqtile/backend/x11/xcursors.py
 +++ b/libqtile/backend/x11/xcursors.py
 @@ -107,7 +107,7 @@ class Cursors(dict):
@@ -9,10 +9,10 @@ index 24454b83..ef37875c 100644
 -            xcursor = ffi.dlopen('libxcb-cursor.so.0')
 +            xcursor = ffi.dlopen('@xcb-cursor@/lib/libxcb-cursor.so.0')
          except OSError:
-             logger.warning("xcb-cursor not found, fallback to font pointer")
+             logger.info("xcb-cursor not found, fallback to font pointer")
              return False
 diff --git a/libqtile/pangocffi.py b/libqtile/pangocffi.py
-index dbae27ed..54c2c35f 100644
+index 6bf904c7..65cd3803 100644
 --- a/libqtile/pangocffi.py
 +++ b/libqtile/pangocffi.py
 @@ -52,10 +52,9 @@ try:

@@ -1,25 +1,24 @@
-{ lib, fetchFromGitHub, python37Packages, glib, cairo, pango, pkg-config, libxcb, xcbutilcursor }:
+{ lib, fetchFromGitHub, python3Packages, glib, cairo, pango, pkg-config, libnotify, libxcb, xcbutilcursor }:
 
-let cairocffi-xcffib = python37Packages.cairocffi.override {
-    withXcffib = true;
-  };
+let cairocffi-xcffib = python3Packages.cairocffi.override {
+  withXcffib = true;
+};
 in
 
-python37Packages.buildPythonApplication rec {
+python3Packages.buildPythonApplication rec {
   name = "qtile-${version}";
-  version = "0.16.0";
+  version = "0.17.0";
 
   src = fetchFromGitHub {
     owner = "qtile";
     repo = "qtile";
     rev = "v${version}";
-    sha256 = "1klv1k9847nyx71sfrhqyl1k51k2w8phqnp2bns4dvbqii7q125l";
+    sha256 = "sha256-HHS9/zpzJq9oA610/WA6U2vsRX/obn13lJLfNLNkOlg=";
   };
 
   patches = [
     ./0001-Substitution-vars-for-absolute-paths.patch
     ./0002-Restore-PATH-and-PYTHONPATH.patch
-    ./0003-Restart-executable.patch
   ];
 
   postPatch = ''
@@ -32,15 +31,16 @@ python37Packages.buildPythonApplication rec {
   SETUPTOOLS_SCM_PRETEND_VERSION = version;
 
   nativeBuildInputs = [ pkg-config ];
-  buildInputs = [ glib libxcb cairo pango python37Packages.xcffib ];
+  buildInputs = [ glib libnotify libxcb cairo pango python3Packages.xcffib ];
 
-  pythonPath = with python37Packages; [
+  pythonPath = with python3Packages; [
     xcffib
     cairocffi-xcffib
     setuptools
     setuptools_scm
     dateutil
     dbus-python
+    libnotify
     mpd2
     psutil
     pyxdg
