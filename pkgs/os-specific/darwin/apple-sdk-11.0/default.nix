@@ -103,7 +103,7 @@ let
 
     rustPlatform = pkgs.makeRustPlatform {
       inherit (pkgs.darwin.apple_sdk_11_0) stdenv;
-      inherit (pkgs) rustc cargo;
+      inherit (pkgs) rustc cargo cargo-auditable;
     };
 
     callPackage = newScope (lib.optionalAttrs stdenv.isDarwin (stdenvs // rec {
