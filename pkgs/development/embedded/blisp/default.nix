@@ -32,6 +32,8 @@ stdenv.mkDerivation (finalAttrs: {
     "-DBLISP_USE_SYSTEM_LIBRARIES=ON"
   ];
 
+  env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.isDarwin "-Wno-error=implicit-function-declaration";
+
   passthru.tests.version = testers.testVersion {
     package = finalAttrs.finalPackage;
     version = "v${finalAttrs.version}";
